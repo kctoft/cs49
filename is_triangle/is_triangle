@@ -14,9 +14,9 @@
 print("This is a program to test whether or not you have a triangle.")
 print("Please answer the following questions.")
 
-a = int(input("What is the length of the first side? '\n"))
-b = int(input("What is the length of the second side?'\n"))
-c = int(input("What is the legnth of the third side?'\n"))
+a = int(input("What is the length of the first side? \n"))
+b = int(input("What is the length of the second side?\n"))
+c = int(input("What is the legnth of the third side?\n"))
 
 def is_triangle(a, b, c):
     if a > (b + c):
@@ -29,3 +29,22 @@ def is_triangle(a, b, c):
         print("True, that is a triangle.")
 
 print(is_triangle(a, b, c))
+
+#Q 4.2.2: getting user input and using recursion
+#
+# Write a fcn that prompts the user to input 3 stick lengths
+# convert them to integers
+# uses the fcn 'is_triangle'
+print("Next question----------------------------")
+print("I want your input now.\n")
+print("How do we know if it is a stick or triangle?\n")
+
+def stick_or_triangle(): #is is a stick or triangle?
+    print("Determine if the 3 lengths can make a stick or triangle.")
+    for i in range(2):
+        d = int(input("What is the length of the first piece?\n"))
+        e = int(input("What is the length of the second piece?\n"))
+        f = int(input("What is the lenght of the final piece?\n"))
+        print(is_triangle(d, e, f))
+
+print(stick_or_triangle())
