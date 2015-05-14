@@ -22,4 +22,7 @@ def check_fermat(a, b, c, n):
     else:
         print("No, that does not work.")
 
+print("Using a = 3, b = 4, c = 5, & n = 3, check Fermat's theorum.")
+print("If wrong, print: 'Holy smokes, Fermat was wrong!'")
+print("If he was right, print: 'No, that doesn't work.'")
 print(check_fermat(a, b, c, n))
