@@ -10,6 +10,7 @@
 # Otherwise you can
 #
 # This is a function called "is_triangle" that tests it for T/F
+import math
 
 print("This is a program to test whether or not you have a triangle.")
 print("Please answer the following questions.")
@@ -48,3 +49,22 @@ def stick_or_triangle(): #is is a stick or triangle?
         print(is_triangle(d, e, f))
 
 print(stick_or_triangle())
+
+#Lab 4.2.3
+# Q: If a triangle can be formed, use the fcn 'triangle_area'
+# to calculate && print its area
+
+print("Next question------------------------")
+# make sure to 'import math' !!!
+
+def triangle_area():
+    print("Find the area of a triangle.")
+    print("Enter the length of the sides: a, b, c.")
+    a = int(input("Enter a number for side 'a': "))
+    b = int(input("Enter a nunber for side 'b': "))
+    c = int(input("Enter a number for side 'c': "))
+    s = (a + b + c) / 2 #sum of a, b, c
+    A = math.sqrt(s * (s - a) * (s - b) * (s - c))
+    print("The area of the triangle is ", A)
+
+print("test triangle_area ",triangle_area())
