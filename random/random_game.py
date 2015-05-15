@@ -19,13 +19,16 @@ def guessing_game(secret_number, guess):
     secret_number = random.randint(0,100)
     guess = int(input("Please enter your guess:(<Enter> to quit) >> ")) #user input
     tries = 1
-    while (guess != secret_number): #continueous loop
+    print("My secret number is ", secret_number)
+    while (True): #continueous loop
         if (guess > secret_number): #guess is bigger than the number
             print("Your guess is greater than the secret number, try again.")
         elif (guess < secret_number):
             print("Your guess is less than the secret number, try again.")
         else:
             print("Congradulations, you guessed right!")
-            print("The secret number was ", secret_number, " and you have made ", tries, " guesses. '\n")
+            print("The secret number was ", secret_number, " and you have made ", tries, " guesses. \n")
+            break
+        guess = int(input("Please try a different number: "))
 
 print(guessing_game(secret_number, guess))
